@@ -5,6 +5,8 @@ QuickBar 0.5.0
  - added to GitHub and now packaged using a build script (rather than PackMan)
  - QuickBar stylesheet now dynamically added to head tag
  - added white-space:nowrap to the li code
+ - now supports CSS resets that use * { box-sizing:border-box }
+ - removed getMgrURL Snippet
 
 QuickBar 0.4.4
 ====================================

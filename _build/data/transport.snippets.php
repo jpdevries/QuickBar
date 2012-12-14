@@ -34,6 +34,25 @@ $snippets[1]->fromArray(array(
     'description' => 'Include this snippet uncached just after your <body>',
     'snippet' => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.quickbar.php'),
 ));
+
+$snippets[2]= $modx->newObject('modSnippet');
+$snippets[2]->fromArray(array(
+    'id' => 1,
+    'name' => 'QuickBar',
+    'description' => 'Include this snippet uncached just after your <body>',
+    'snippet' => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.quickbar.php'),
+));
+
+$snippets[3]= $modx->newObject('modSnippet');
+$snippets[3]->fromArray(array(
+    'id' => 1,
+    'name' => 'createNewLink',
+    'description' => 'Creates link for creating new resource under the current document',
+    'snippet' => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.createnewlink.php'),
+));
+
+
+
 //$properties = include $sources['data'].'properties/properties.quip.php';
 //$snippets[1]->setProperties($properties);
 

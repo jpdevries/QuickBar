@@ -292,8 +292,8 @@ END OF TERMS AND CONDITIONS',
     'readme' => '--------------------
 Extra: QuickBar
 --------------------
-Version: 0.4.4
-Created: September 18, 2012
+Version: 0.5.0
+Created: December 14, 2012
 Author: JP DeVries <mail@devries.jp>
 License: GNU GPLv2 (or later at your option)
 
@@ -302,12 +302,19 @@ If logged into the Manager, adds an Evo style hover bar to the top of your site 
 
 Thanks for using QuickBar
 JP DeVries	
-mail@devries.jp',
+mail@devries.jp
+
+Find QuickBar on GitHub:
+https://github.com/jpdevries/QuickBar/',
     'changelog' => 'Changelog for QuickBar integration into MODx Revolution.
 
 QuickBar 0.5.0
 ====================================
  - added to GitHub and now packaged using a build script (rather than PackMan)
+ - QuickBar stylesheet now dynamically added to head tag
+ - added white-space:nowrap to the li code
+ - now supports CSS resets that use * { box-sizing:border-box }
+ - removed getMgrURL Snippet
 
 QuickBar 0.4.4
 ====================================
@@ -327,9 +334,9 @@ QuickBar 0.4.3
       'vehicle_package' => 'transport',
       'vehicle_class' => 'xPDOObjectVehicle',
       'class' => 'modNamespace',
-      'guid' => '04eb1b67371521e0136b6cbea6dc19bb',
+      'guid' => '3b63b077d89f3e4d75800bc9afdfe6c0',
       'native_key' => 'quickbar',
-      'filename' => 'modNamespace/9b66ba80a2a20fba1fcc20485188730a.vehicle',
+      'filename' => 'modNamespace/8cb522ed8b641b39ce2de27c467b5d9c.vehicle',
       'namespace' => 'quickbar',
     ),
     1 => 
@@ -337,9 +344,9 @@ QuickBar 0.4.3
       'vehicle_package' => 'transport',
       'vehicle_class' => 'xPDOObjectVehicle',
       'class' => 'modCategory',
-      'guid' => '223a492b5fce6ab2c498dd3f27f9ce7b',
+      'guid' => 'ca1f062ff93753f1931b2f72547ef862',
       'native_key' => 1,
-      'filename' => 'modCategory/91f0418d9ffc196e3129cd1259775da6.vehicle',
+      'filename' => 'modCategory/4b22baf968f88371c3576ad9c420959a.vehicle',
       'namespace' => 'quickbar',
     ),
   ),
