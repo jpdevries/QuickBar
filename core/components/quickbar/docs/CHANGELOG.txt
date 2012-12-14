@@ -1,0 +1,17 @@
+Changelog for QuickBar integration into MODx Revolution.
+
+QuickBar 0.5.0
+====================================
+ - added to GitHub and now packaged using a build script (rather than PackMan)
+ - QuickBar stylesheet now dynamically added to head tag
+ - added white-space:nowrap to the li code
+
+QuickBar 0.4.4
+====================================
+ - added responsive styling for 480px wide and below
+ - added responsive styling for touch devices (if modernizr is included)
+
+QuickBar 0.4.3
+====================================
+ - initial commit
+ - to use, include [[!QuickBar]] just after your closing body tag

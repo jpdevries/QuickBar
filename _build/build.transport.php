@@ -19,6 +19,8 @@ $mtime = $mtime[1] + $mtime[0];
 $tstart = $mtime;
 set_time_limit(0);
 
+
+
 /* define package */
 define('PKG_NAME','QuickBar');
 define('PKG_NAME_LOWER',strtolower(PKG_NAME));
@@ -36,10 +38,13 @@ $sources= array (
     'source_assets' => $root.'assets/components/'.PKG_NAME_LOWER,
     //'plugins' => $root.'core/components/'.PKG_NAME_LOWER.'/elements/plugins/',
     'snippets' => $root.'core/components/'.PKG_NAME_LOWER.'/elements/snippets/',
+	'chunks' => $root.'core/components/'.PKG_NAME_LOWER.'/elements/chunks/',
     'lexicon' => $root . 'core/components/'.PKG_NAME_LOWER.'/lexicon/',
     'docs' => $root.'core/components/'.PKG_NAME_LOWER.'/docs/',
     'model' => $root.'core/components/'.PKG_NAME_LOWER.'/model/',
 );
+
+
 
 require_once $sources['root'] . 'config.core.php';
 require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
@@ -62,20 +67,45 @@ $category->set('id',1);
 $category->set('category',PKG_NAME);
 $modx->log(modX::LOG_LEVEL_INFO,'Packaged in category.'); flush();
 
+/* create the snippet */
+/* add snippets */
+$snippets = include $sources['data'].'transport.snippets.php';
+if (is_array($snippets)) {
+    $category->addMany($snippets,'Snippets');
+} else { $modx->log(modX::LOG_LEVEL_FATAL,'Adding snippets failed.'); }
+$modx->log(modX::LOG_LEVEL_INFO,'Packaged in '.count($snippets).' snippets.'); flush();
+unset($snippets);
+
+/* add chunks */
+$chunks = include $sources['data'].'transport.chunks.php';
+if (is_array($chunks)) {
+    $category->addMany($chunks);
+} else { $modx->log(modX::LOG_LEVEL_FATAL,'Adding chunks failed.'); }
+
+/*
+$properties = include $sources['data'].'properties.inc.php';
+$snippet->setProperties($properties);
+$category->addMany($snippet);
+*/
+
 /* Settings */
-$settings = include_once $sources['data'].'transport.settings.php';
+/*$settings = include_once $sources['data'].'transport.settings.php';
 $attributes= array(
     xPDOTransport::UNIQUE_KEY => 'key',
     xPDOTransport::PRESERVE_KEYS => true,
     xPDOTransport::UPDATE_OBJECT => false,
 );
+
 if (!is_array($settings)) { $modx->log(modX::LOG_LEVEL_FATAL,'Adding settings failed.'); }
+
 foreach ($settings as $setting) {
     $vehicle = $builder->createVehicle($setting,$attributes);
     $builder->putVehicle($vehicle);
 }
+
 $modx->log(modX::LOG_LEVEL_INFO,'Packaged in '.count($settings).' system settings.'); flush();
 unset($settings,$setting,$attributes);
+*/
 
 
 /* add plugins */
@@ -121,6 +151,25 @@ $attr = array(
 );
 */
 
+/* create category vehicle */
+$attr = array(
+    xPDOTransport::UNIQUE_KEY => 'category',
+    xPDOTransport::PRESERVE_KEYS => false,
+    xPDOTransport::UPDATE_OBJECT => true,
+    xPDOTransport::RELATED_OBJECTS => true,
+    xPDOTransport::RELATED_OBJECT_ATTRIBUTES => array (
+        'Snippets' => array(
+            xPDOTransport::PRESERVE_KEYS => false,
+            xPDOTransport::UPDATE_OBJECT => true,
+            xPDOTransport::UNIQUE_KEY => 'name',
+        ),
+        'Chunks' => array (
+            xPDOTransport::PRESERVE_KEYS => false,
+            xPDOTransport::UPDATE_OBJECT => true,
+            xPDOTransport::UNIQUE_KEY => 'name',
+        ),
+    )
+);
 $vehicle = $builder->createVehicle($category,$attr);
 $vehicle->resolve('file',array(
     'source' => $sources['source_core'],
@@ -129,7 +178,7 @@ $vehicle->resolve('file',array(
 $vehicle->resolve('file',array(
     'source' => $sources['source_assets'],
     'target' => "return MODX_ASSETS_PATH . 'components/';",
-));
+)); 
 
 /*$vehicle->resolve('php',array(
     'source' => $sources['resolvers'] . 'tables.resolver.php',
