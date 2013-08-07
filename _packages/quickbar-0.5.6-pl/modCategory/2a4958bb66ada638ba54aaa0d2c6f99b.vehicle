@@ -1,0 +1,96 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '8bdf1b81aa80706d5d5a597b4a8c52ba' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"quickbar","description":"QuickBar markup used with QuickBar Snippet","editor_type":0,"category":0,"cache_type":0,"snippet":"<div id=\\"quickbar-wrapper\\" class=\\"quickbar-wrapper\\">\\n    <div class=\\"quickbar\\">\\n        <ul>\\n        \\t<li><a href=\\"[[+mgr_url]]?a=30&id=[[*id]]\\" target=\\"_blank\\">Edit Resource<\\/a><\\/li>\\n\\t\\t\\t<li><a href=\\"[[+mgr_url]]\\" target=\\"_blank\\">Dashboard<\\/a><\\/li>\\n            <li><a href=\\"[[!createNewLink]]\\" target=\\"_blank\\">Create Here<\\/a><\\/li>\\n\\t\\t\\t[[-<li class=\\"help\\"><a href=\\"[[~1? &service=`logout` &scheme=`full`]]\\" data-href=\\"http:\\/\\/rtfm.modx.com\\/display\\/revolution20\\/An+Overview+of+MODX\\" target=\\"_blank\\">Help<\\/a><\\/li>]]\\n    \\t<\\/ul>\\n    <\\/div>\\n<\\/div>","locked":0,"properties":null,"static":0,"static_file":"","content":"<div id=\\"quickbar-wrapper\\" class=\\"quickbar-wrapper\\">\\n    <div class=\\"quickbar\\">\\n        <ul>\\n        \\t<li><a href=\\"[[+mgr_url]]?a=30&id=[[*id]]\\" target=\\"_blank\\">Edit Resource<\\/a><\\/li>\\n\\t\\t\\t<li><a href=\\"[[+mgr_url]]\\" target=\\"_blank\\">Dashboard<\\/a><\\/li>\\n            <li><a href=\\"[[!createNewLink]]\\" target=\\"_blank\\">Create Here<\\/a><\\/li>\\n\\t\\t\\t[[-<li class=\\"help\\"><a href=\\"[[~1? &service=`logout` &scheme=`full`]]\\" data-href=\\"http:\\/\\/rtfm.modx.com\\/display\\/revolution20\\/An+Overview+of+MODX\\" target=\\"_blank\\">Help<\\/a><\\/li>]]\\n    \\t<\\/ul>\\n    <\\/div>\\n<\\/div>"}',
+        'guid' => '2c3448905c3a8b6d7a260d80263046a0',
+        'native_key' => NULL,
+        'signature' => '17fab7beffce4dea7c384be569d9dde9',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '5d43514a886727967bf454bef4df2ec0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"QuickBar","description":"Include this snippet uncached just after your <body>","editor_type":0,"category":0,"cache_type":0,"snippet":"if (!$modx->user->hasSessionContext(\'mgr\') ) return \'\';\\n$modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/quickbar\\/style.css\');\\nreturn $modx->getChunk(\'quickbar\',array(\'mgr_url\' => MODX_MANAGER_URL));","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"if (!$modx->user->hasSessionContext(\'mgr\') ) return \'\';\\n$modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/quickbar\\/style.css\');\\nreturn $modx->getChunk(\'quickbar\',array(\'mgr_url\' => MODX_MANAGER_URL));"}',
+        'guid' => '173f7751883c68115625df50107d068d',
+        'native_key' => NULL,
+        'signature' => '27d1e39ac2980e8e423b3fd12c13e3b7',
+      ),
+      '4779f81163f6479084bb4827b78c0523' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"QuickBar","description":"Include this snippet uncached just after your <body>","editor_type":0,"category":0,"cache_type":0,"snippet":"if (!$modx->user->hasSessionContext(\'mgr\') ) return \'\';\\n$modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/quickbar\\/style.css\');\\nreturn $modx->getChunk(\'quickbar\',array(\'mgr_url\' => MODX_MANAGER_URL));","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"if (!$modx->user->hasSessionContext(\'mgr\') ) return \'\';\\n$modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/quickbar\\/style.css\');\\nreturn $modx->getChunk(\'quickbar\',array(\'mgr_url\' => MODX_MANAGER_URL));"}',
+        'guid' => '6fdba42a5f389d86251a8d988984e482',
+        'native_key' => NULL,
+        'signature' => '4e3bb2a2d0fd271c4daa9484a4df9971',
+      ),
+      '177faced998ab72ec00783b063dae140' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"createNewLink","description":"Creates link for creating new resource under the current document","editor_type":0,"category":0,"cache_type":0,"snippet":"$context = $modx->context->key;\\n$classKey = $modx->resource->get(\'class_key\');\\n\\n$id = $modx->resource->get(\'id\');\\n\\nswitch($classKey) {\\n    case \'ArticlesContainer\':\\n    $classKey = \'Article\';\\n    break;\\n    \\n    case \'Article\':\\n    $id = $modx->resource->get(\'parent\');\\n    break;\\n    \\n    default:\\n    $classKey = \'modDocument\';\\n    break;\\n}\\n\\nreturn MODX_MANAGER_URL . \\"?id=$id&a=55&class_key=$classKey&parent=$id&context_key=$context\\";","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"$context = $modx->context->key;\\n$classKey = $modx->resource->get(\'class_key\');\\n\\n$id = $modx->resource->get(\'id\');\\n\\nswitch($classKey) {\\n    case \'ArticlesContainer\':\\n    $classKey = \'Article\';\\n    break;\\n    \\n    case \'Article\':\\n    $id = $modx->resource->get(\'parent\');\\n    break;\\n    \\n    default:\\n    $classKey = \'modDocument\';\\n    break;\\n}\\n\\nreturn MODX_MANAGER_URL . \\"?id=$id&a=55&class_key=$classKey&parent=$id&context_key=$context\\";"}',
+        'guid' => '194c453f74fbe286c8f9e45bb936005d',
+        'native_key' => NULL,
+        'signature' => '9089bd13927a16a99ef405010f20daf0',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'quickbar',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"quickbar-0.5.6-pl\\/modCategory\\/2a4958bb66ada638ba54aaa0d2c6f99b\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"quickbar"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"quickbar-0.5.6-pl\\/modCategory\\/2a4958bb66ada638ba54aaa0d2c6f99b\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"quickbar"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '47efe97ed460ef110f70700dc27ef2d4',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '2a4958bb66ada638ba54aaa0d2c6f99b',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"QuickBar"}',
+);

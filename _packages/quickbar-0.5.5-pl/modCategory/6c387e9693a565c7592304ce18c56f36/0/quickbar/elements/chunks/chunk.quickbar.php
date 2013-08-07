@@ -1,4 +1,4 @@
-<div id="quickbar-wrapper" class="quickbar-wrapper">
+<div class="quickbar-wrapper">
     <div class="quickbar">
         <ul>
         	<li><a href="[[+mgr_url]]?a=30&id=[[*id]]" target="_blank">Edit Resource</a></li>

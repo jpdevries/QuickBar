@@ -1,14 +1,14 @@
-#quickbar-wrapper * {
+.quickbar-wrapper * {
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;    
 	box-sizing: border-box;         
 }
 
-#quickbar-wrapper {
+.quickbar-wrapper {
   height: 4px !important;
   overflow: visible !important; }
 
-#quickbar-wrapper .quickbar {
+.quickbar {
   width: 100% !important;
   height: 40px !important;
   border-bottom: 4px solid #9ac54f !important;
@@ -28,13 +28,13 @@
   -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5); }
-  #quickbar-wrapper .quickbar:hover {
+  .quickbar:hover {
     top: 0 !important;
     -webkit-transition: all 240ms ease-in;
     -moz-transition: all 240ms ease-in;
     -o-transition: all 240ms ease-in;
     transition: all 240ms ease-in; }
-  #quickbar-wrapper .quickbar ul {
+  .quickbar ul {
     margin: 0 !important;
     color: white !important;
     position: absolute !important;
@@ -47,7 +47,7 @@
     -o-box-sizing: border-box !important;
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important; }
-    #quickbar-wrapper .quickbar ul li {
+    .quickbar ul li {
 	  white-space:nowrap !important;
       display: inline-block !important;
       background-color: #5D8A36 !important;
@@ -82,19 +82,19 @@
       /* oh, webkit */
       cursor: pointer !important;
       color: #ecf8e1 !important; }
-      #quickbar-wrapper .quickbar ul li:hover {
+      .quickbar ul li:hover {
         color: white !important;
         opacity: 0.86 !important; }
-      #quickbar-wrapper .quickbar ul li.help {
+      .quickbar ul li.help {
         float: right !important; }
-      #quickbar-wrapper .quickbar ul li a, #quickbar-wrapper .quickbar ul li a:visited {
+      .quickbar ul li a, .quickbar ul li a:visited {
         color: inherit !important;
         text-decoration: none !important; }
-      #quickbar-wrapper .quickbar ul li a {
+      .quickbar ul li a {
         font-family: Helvetica, Arial, sans-serif !important;
         letter-spacing: 0 !important; }
 
-.touch #quickbar-wrapper .quickbar {
+.touch .quickbar {
   top: 0 !important; }
 
 @media only screen and (max-width: 480px) {

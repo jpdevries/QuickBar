@@ -1,7 +1,7 @@
 --------------------
 Extra: QuickBar
 --------------------
-Version: 0.5.6
+Version: 0.5.0
 Created: December 14, 2012
 Author: JP DeVries <mail@devries.jp>
 License: GNU GPLv2 (or later at your option)
