@@ -24,7 +24,7 @@ set_time_limit(0);
 /* define package */
 define('PKG_NAME','QuickBar');
 define('PKG_NAME_LOWER',strtolower(PKG_NAME));
-define('PKG_VERSION','0.5.6');
+define('PKG_VERSION','0.5.8');
 define('PKG_RELEASE','pl');
 
 $root = dirname(dirname(__FILE__)).'/';
@@ -46,7 +46,7 @@ $sources= array (
 
 
 
-require_once $sources['root'] . 'config.core.php';
+require_once $sources['build'] . 'build.config.php';
 require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 
 $modx= new modX();
@@ -56,7 +56,6 @@ $modx->setLogTarget('ECHO'); echo 'Packing '.PKG_NAME_LOWER.'-'.PKG_VERSION.'-'.
 
 $modx->loadClass('transport.modPackageBuilder','',false, true);
 $builder = new modPackageBuilder($modx);
-$builder->directory = dirname(dirname(__FILE__)).'/_packages/';
 $builder->createPackage(PKG_NAME_LOWER,PKG_VERSION,PKG_RELEASE);
 $builder->registerNamespace(PKG_NAME_LOWER,false,true,'{core_path}components/'.PKG_NAME_LOWER.'/');
 $modx->getService('lexicon','modLexicon');
@@ -77,10 +76,10 @@ $modx->log(modX::LOG_LEVEL_INFO,'Packaged in '.count($snippets).' snippets.'); f
 unset($snippets);
 
 /* add chunks */
-$chunks = include $sources['data'].'transport.chunks.php';
+/*$chunks = include $sources['data'].'transport.chunks.php';
 if (is_array($chunks)) {
     $category->addMany($chunks);
-} else { $modx->log(modX::LOG_LEVEL_FATAL,'Adding chunks failed.'); }
+} else { $modx->log(modX::LOG_LEVEL_FATAL,'Adding chunks failed.'); }*/
 
 /*
 $properties = include $sources['data'].'properties.inc.php';
@@ -171,21 +170,39 @@ $attr = array(
     )
 );
 $vehicle = $builder->createVehicle($category,$attr);
+$modx->log(modX::LOG_LEVEL_INFO,'Adding file resolvers to category...');
+$vehicle->resolve('file',array(
+    'source' => $sources['source_assets'],
+    'target' => "return MODX_ASSETS_PATH . 'components/';",
+));
 $vehicle->resolve('file',array(
     'source' => $sources['source_core'],
     'target' => "return MODX_CORE_PATH . 'components/';",
 ));
-$vehicle->resolve('file',array(
-    'source' => $sources['source_assets'],
-    'target' => "return MODX_ASSETS_PATH . 'components/';",
-)); 
-
-/*$vehicle->resolve('php',array(
-    'source' => $sources['resolvers'] . 'tables.resolver.php',
-));*/
-
-$modx->log(modX::LOG_LEVEL_INFO,'Packaged in resolvers.'); flush();
 $builder->putVehicle($vehicle);
+$modx->log(modX::LOG_LEVEL_INFO,'Packaging in menu...');
+//$menu = include $sources['data'].'transport.menu.php';
+//if (empty($menu)) $modx->log(modX::LOG_LEVEL_ERROR,'Could not package in menu.');
+$vehicle= $builder->createVehicle($menu,array (
+    xPDOTransport::PRESERVE_KEYS => true,
+    xPDOTransport::UPDATE_OBJECT => true,
+    xPDOTransport::UNIQUE_KEY => 'text',
+    xPDOTransport::RELATED_OBJECTS => true,
+    xPDOTransport::RELATED_OBJECT_ATTRIBUTES => array (
+        'Action' => array (
+            xPDOTransport::PRESERVE_KEYS => false,
+            xPDOTransport::UPDATE_OBJECT => true,
+            xPDOTransport::UNIQUE_KEY => array ('namespace','controller'),
+        ),
+    ),
+));
+$modx->log(modX::LOG_LEVEL_INFO,'Adding in PHP resolvers...');
+$vehicle->resolve('php',array(
+    'source' => $sources['resolvers'] . 'resolve.tables.php',
+));
+$modx->log(modX::LOG_LEVEL_INFO,'Adding in PHP resolvers...');
+$builder->putVehicle($vehicle);
+unset($vehicle,$menu);
 
 /* now pack in the license file, readme and setup options */
 $builder->setPackageAttributes(array(

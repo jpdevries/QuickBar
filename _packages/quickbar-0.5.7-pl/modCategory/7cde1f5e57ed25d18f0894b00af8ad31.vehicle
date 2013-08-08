@@ -1,0 +1,74 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '00fd7fa35986389fd752b3aa041653e0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"quickbar","description":"QuickBar markup used with QuickBar Snippet","editor_type":0,"category":0,"cache_type":0,"snippet":"<div id=\\"quickbar-wrapper\\" class=\\"quickbar-wrapper\\">\\n    <div class=\\"quickbar\\">\\n        <ul>\\n        \\t<li><a href=\\"[[+mgr_url]]?a=30&id=[[*id]]\\" target=\\"_blank\\">Edit Resource<\\/a><\\/li>\\n\\t\\t\\t<li><a href=\\"[[+mgr_url]]\\" target=\\"_blank\\">Dashboard<\\/a><\\/li>\\n            <li><a href=\\"[[!createNewLink]]\\" target=\\"_blank\\">Create Here<\\/a><\\/li>\\n\\t\\t\\t[[-<li class=\\"help\\"><a href=\\"[[~1? &service=`logout` &scheme=`full`]]\\" data-href=\\"http:\\/\\/rtfm.modx.com\\/display\\/revolution20\\/An+Overview+of+MODX\\" target=\\"_blank\\">Help<\\/a><\\/li>]]\\n    \\t<\\/ul>\\n    <\\/div>\\n<\\/div>","locked":0,"properties":null,"static":0,"static_file":"","content":"<div id=\\"quickbar-wrapper\\" class=\\"quickbar-wrapper\\">\\n    <div class=\\"quickbar\\">\\n        <ul>\\n        \\t<li><a href=\\"[[+mgr_url]]?a=30&id=[[*id]]\\" target=\\"_blank\\">Edit Resource<\\/a><\\/li>\\n\\t\\t\\t<li><a href=\\"[[+mgr_url]]\\" target=\\"_blank\\">Dashboard<\\/a><\\/li>\\n            <li><a href=\\"[[!createNewLink]]\\" target=\\"_blank\\">Create Here<\\/a><\\/li>\\n\\t\\t\\t[[-<li class=\\"help\\"><a href=\\"[[~1? &service=`logout` &scheme=`full`]]\\" data-href=\\"http:\\/\\/rtfm.modx.com\\/display\\/revolution20\\/An+Overview+of+MODX\\" target=\\"_blank\\">Help<\\/a><\\/li>]]\\n    \\t<\\/ul>\\n    <\\/div>\\n<\\/div>"}',
+        'guid' => '3886ed9ea8b8e96e11abbdf6f9eb4831',
+        'native_key' => NULL,
+        'signature' => '3b55d8b46cec9a232d2a07f7bec978ad',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '2ac74af98be4577d5f2482ebe0395f34' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"QuickBar","description":"Include this snippet uncached just after your <body>","editor_type":0,"category":0,"cache_type":0,"snippet":"if (!$modx->user->hasSessionContext(\'mgr\') ) return \'\';\\n\\n$defaultQuickBarCorePath = $modx->getOption(\'core_path\').\'components\\/quickbar\\/\';\\n$quickbarsCorePath = $modx->getOption(\'quickbar.core_path\',null,$defaultQuickBarCorePath);\\n$quickbar = $modx->getService(\'quickbar\',\'QuickBar\',$quickbarsCorePath.\'model\\/quickbar\\/\',$scriptProperties);\\n\\n$modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/quickbar\\/style.css\');\\nreturn $quickbar->getChunk(\'quickbar\',array(\'mgr_url\' => MODX_MANAGER_URL));","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"if (!$modx->user->hasSessionContext(\'mgr\') ) return \'\';\\n\\n$defaultQuickBarCorePath = $modx->getOption(\'core_path\').\'components\\/quickbar\\/\';\\n$quickbarsCorePath = $modx->getOption(\'quickbar.core_path\',null,$defaultQuickBarCorePath);\\n$quickbar = $modx->getService(\'quickbar\',\'QuickBar\',$quickbarsCorePath.\'model\\/quickbar\\/\',$scriptProperties);\\n\\n$modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/quickbar\\/style.css\');\\nreturn $quickbar->getChunk(\'quickbar\',array(\'mgr_url\' => MODX_MANAGER_URL));"}',
+        'guid' => '3d2646199a2e0557d2131455cbf6a08d',
+        'native_key' => NULL,
+        'signature' => 'a5ded67318fb38f0e8f7cf14e6587ff5',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'quickbar',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"quickbar-0.5.7-pl\\/modCategory\\/7cde1f5e57ed25d18f0894b00af8ad31\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"quickbar"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"quickbar-0.5.7-pl\\/modCategory\\/7cde1f5e57ed25d18f0894b00af8ad31\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"quickbar"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cd29f5baee3bc8ea3582205d37035d5c',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '7cde1f5e57ed25d18f0894b00af8ad31',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"QuickBar"}',
+);

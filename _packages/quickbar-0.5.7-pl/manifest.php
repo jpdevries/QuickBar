@@ -292,7 +292,7 @@ END OF TERMS AND CONDITIONS',
     'readme' => '--------------------
 Extra: QuickBar
 --------------------
-Version: 0.5.0
+Version: 0.5.6
 Created: December 14, 2012
 Author: JP DeVries <mail@devries.jp>
 License: GNU GPLv2 (or later at your option)
@@ -307,6 +307,10 @@ mail@devries.jp
 Find QuickBar on GitHub:
 https://github.com/jpdevries/QuickBar/',
     'changelog' => 'Changelog for QuickBar integration into MODx Revolution.
+
+QuickBar 0.5.6
+====================================
+ - Now using id rather than class for quickbar-wrapper
 
 QuickBar 0.5.5
 ====================================
@@ -334,9 +338,9 @@ QuickBar 0.4.3
       'vehicle_package' => 'transport',
       'vehicle_class' => 'xPDOObjectVehicle',
       'class' => 'modNamespace',
-      'guid' => '30f02ae9b5788539b49746cbff57d5b6',
+      'guid' => '866e901dae0c7f02d61f25c4f8240da2',
       'native_key' => 'quickbar',
-      'filename' => 'modNamespace/6ec5cf86c61f1d95ddcda265af4e4501.vehicle',
+      'filename' => 'modNamespace/4f486b4c8cee31bbfaad8a1185c4d9ae.vehicle',
       'namespace' => 'quickbar',
     ),
     1 => 
@@ -344,9 +348,9 @@ QuickBar 0.4.3
       'vehicle_package' => 'transport',
       'vehicle_class' => 'xPDOObjectVehicle',
       'class' => 'modCategory',
-      'guid' => 'e88583dba322ca398c64c682cf78b015',
+      'guid' => 'cd29f5baee3bc8ea3582205d37035d5c',
       'native_key' => 1,
-      'filename' => 'modCategory/6c387e9693a565c7592304ce18c56f36.vehicle',
+      'filename' => 'modCategory/7cde1f5e57ed25d18f0894b00af8ad31.vehicle',
       'namespace' => 'quickbar',
     ),
   ),
