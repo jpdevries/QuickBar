@@ -1,10 +1,4 @@
-----------------------
-QuickBar
-----------------------
-Version: 0.4.4
-Author: JP DeVries
-Contact: mail@devries.jp
-----------------------
+#Quickbar
 
 QuickBar adds an Evo-style Quick Edit bar to the front end of your site. For logged in users only of course.
 
