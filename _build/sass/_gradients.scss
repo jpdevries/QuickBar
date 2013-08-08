@@ -1,0 +1,23 @@
+/**
+ * Usage:
+ * @include gradient( background-image, linear-gradient(180deg, rgba(23,66,89,0.8) 42%, transparent 100% ) );
+ */
+
+@mixin gradient($prop, $val...) {
+	$n: length($val);
+	$i: 1;
+
+	$grad-list: ();
+	$prefix-list: ();
+
+	@while $i <= $n {
+		$grad-list: append($grad-list, nth($val, $i), comma);
+		$i: $i + 1;
+	}
+
+	#{$prop}: -webkit-#{$grad-list};
+	#{$prop}: -moz-#{$grad-list};
+	#{$prop}: -ms-#{$grad-list};
+	#{$prop}: -o-#{$grad-list};
+	#{$prop}: $grad-list;
+}

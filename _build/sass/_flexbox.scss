@@ -1,0 +1,163 @@
+@mixin flexbox( $display: flex, $direction: row, $wrap: wrap, $justify: start, $items: start, $content: start ) {
+// <display> - flex | inline-flex
+// <direction> - row | row-reverse | column | column-reverse
+// <wrap> - wrap | nowrap | wrap-reverse
+// <justify> - start | end | center | space-between | space-around
+// <items> - start | end | center | baseline | stretch
+// <content> - start | end | center | space-between | space-around | stretch
+
+// @include flexbox( flex, row, wrap, start, start, start );
+// @include flexbox( inline-flex, column, nowrap, center, start, stretch );
+// @include flexbox( flex, row-reverse, wrap, center, start, center );
+
+  @extend %mozbox;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-#{$display}box;
+  display: -webkit-#{$display};
+  display: $display;
+
+@if $direction == row {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+} @else if $direction == row-reverse {
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+} @else if $direction == column {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+} @else if $direction == column-reverse {
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+}
+
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+
+@if $justify == start {
+  -webkit-box-pack: $justify;
+  -moz-box-pack: $justify;
+  -webkit-justify-content: flex-#{$justify};
+  -ms-flex-pack: $justify;
+  justify-content: flex-#{$justify};
+} @else if $justify == end {
+  -webkit-box-pack: $justify;
+  -moz-box-pack: $justify;
+  -webkit-justify-content: flex-#{$justify};
+  -ms-flex-pack: $justify;
+  justify-content: flex-#{$justify};
+} @else if $justify == space-between {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: $justify;
+  -ms-flex-pack: justify;
+  justify-content: $justify;
+} @else if $justify == space-around {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: $justify;
+  -ms-flex-pack: distribute;
+  justify-content: $justify;
+} @else {
+  -webkit-box-pack: $justify;
+  -moz-box-pack: $justify;
+  -webkit-justify-content: $justify;
+  -ms-flex-pack: $justify;
+  justify-content: $justify;
+}
+
+@if $items == start {
+  -webkit-box-align: $items;
+  -moz-box-align: $items;
+  -webkit-align-items: flex-#{$items};
+  -ms-flex-align: $items;
+  align-items: flex-#{$items};
+} @else if $items == end {
+  -webkit-box-align: $items;
+  -moz-box-align: $items;
+  -webkit-align-items: flex-#{$items};
+  -ms-flex-align: $items;
+  align-items: flex-#{$items};
+} @else {
+  -webkit-box-align: $items;
+  -moz-box-align: $items;
+  -webkit-align-items: $items;
+  -ms-flex-align: $items;
+  align-items: $items;
+}
+
+@if $content == start {
+  -webkit-align-content: flex-#{$content};
+  -ms-flex-line-pack: $content;
+  align-content: flex-#{$content};
+} @else if $content == end {
+  -webkit-align-content: flex-#{$content};
+  -ms-flex-line-pack: $content;
+  align-content: flex-#{$content};
+} @else if $content == space-between {
+  -webkit-align-content: $content;
+  -ms-flex-line-pack: justify;
+  align-content: $content;
+} @else if $content == space-around {
+  -webkit-align-content: $content;
+  -ms-flex-line-pack: distribute;
+  align-content: $content;
+} @else {
+  -webkit-align-content: $content;
+  -ms-flex-line-pack: $content;
+  align-content: $content;
+}
+}
+
+@mixin flex( $grow: 0, $shrink: 1, $basis: auto ) {
+// <grow> - flex-grow (integer)
+// <shrink> - flex-shrink (integer)
+// <basis> - flex-basis (length)
+
+// @include flex( 0, 1, auto );
+// @include flex( 2, 1, 100px );
+
+  -webkit-box-flex: $grow;
+  -moz-box-flex: $grow;
+  -webkit-flex: $grow $shrink $basis;
+  -ms-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
+}
+
+@mixin flexitem( $order: 0, $grow: 0, $shrink: 1, $basis: auto, $align: auto ) {
+// <order> -(integer)
+// <grow> - flex-grow (integer)
+// <shrink> - flex-shrink (integer)
+// <basis> - flex-basis (length)
+// <align> - start | end | center | space-between | space-around | stretch
+
+// @include flexitem( 0, 0, 1, auto, start );
+// @include flexitem( 1, 1, 1, 100px, stretch );
+// @include flexitem( 0, 2, 1, auto, center );
+
+  -webkit-box-ordinal-group: $order + 1;
+  -moz-box-ordinal-group: $order + 1;
+  -webkit-order: $order;
+  -ms-flex-order: $order;
+  order: $order;
+
+  @include flex( $grow, $shrink, $basis );
+
+  -webkit-align-self: $align;
+  -ms-flex-item-align: $align;
+  align-self: $align;
+}

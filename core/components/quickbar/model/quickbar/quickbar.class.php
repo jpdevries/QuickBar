@@ -40,6 +40,13 @@ class QuickBar {
 	    return $chunk->process($properties);
 	}
 
+	public function parse($tpl, $properties = array() ) {
+    	$modChunk = $this->modx->newObject('modChunk');
+    	$modChunk->setCacheable(false);
+    	$modChunk->setContent($tpl);
+    	return $modChunk->process( $properties );
+}
+
 	private function _getTplChunk($name,$postfix = '.chunk.tpl') {
 	    $chunk = false;
 	    $f = $this->config['chunksPath'].strtolower($name).$postfix;
