@@ -41,7 +41,7 @@
 #quickbar-wrapper .quickbar ul li {
   white-space: nowrap;
   display: inline-block;
-  padding: 2px 8px 1px 8px;
+  padding: 4px 8px 1px 8px;
   height: 24px;
   margin-right: 4px; }
 
@@ -58,10 +58,10 @@
 /* start style */
 /* properties */
 #quickbar-wrapper .quickbar {
-  border-bottom: 4px solid #9ac54f;
-  background: #131313;
-  background: rgba(19, 19, 19, 0.96);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid #464646;
+  background: #1e1e1e;
+  background: rgba(30, 30, 30, 0.96);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 160ms ease-in;
   -moz-transition: all 160ms ease-in;
   -o-transition: all 160ms ease-in;
@@ -73,15 +73,15 @@
     transition: all 240ms ease-in; }
 
 #quickbar-wrapper .quickbar ul {
-  color: white; }
+  color: #c8c8c8; }
   #quickbar-wrapper .quickbar ul li {
-    text-shadow: #263816 0 1px 0;
-    border-top: 1px solid #8abf5b;
+    text-shadow: none;
+    border-top: 1px solid #787878;
     border-bottom: 1px solid black;
     font-size: 13px;
     border-radius: 4px;
     opacity: 0.99;
-    font-weight: bold;
+    font-weight: normal;
     background-color: #5D8A36;
     cursor: pointer;
     -webkit-box-sizing: border-box !important;
@@ -98,17 +98,17 @@
         color: inherit;
         text-decoration: none; }
 
+#quickbar-wrapper {
+  text-transform: lowercase; }
+
 /* add a gradient and a rollover effect */
 #quickbar-wrapper .quickbar ul li {
   -webkit-transition: all 240ms ease-out;
   -moz-transition: all 240ms ease-out;
   -o-transition: all 240ms ease-out;
   transition: all 240ms ease-out;
-  background-image: -webkit-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: -moz-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: -ms-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: -o-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: linear-gradient(180deg, #70a641 42%, #4b6f2b 100%); }
+  background: #484848 42%;
+  /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/ }
   #quickbar-wrapper .quickbar ul li:hover {
     color: white;
     opacity: 0.86; }
