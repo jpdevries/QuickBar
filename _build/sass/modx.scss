@@ -8,7 +8,7 @@
 $sliverH:4px;
 
 $white:white;
-$offwhite:#ecf8e1;
+$offwhite:#ECECEC;
 $black:black;
 
 $blue:#00ADD8;
@@ -51,6 +51,8 @@ $buttonHighlight:$lightBlue;
 $buttonLowLight:darken($blue,20%);
 $fontWeight:normal;  
 $borderBH:0;
+$fontFamily:"Lucida Console", Monaco, monospace;
+$fontSize:12px;
 
 $buttonGradientFrom:$lightBlue 42%;
 $buttonGradientTo:$blue 100%;
@@ -66,8 +68,13 @@ $buttonGradientTo:$blue 100%;
   $buttonHighlight,
   $buttonLowLight,
   $fontWeight,
-  $borderBH
+  $borderBH,
+  $fontSize
 ); 
+
+@include quickbar-fontfamily {
+  font-family:"Lucida Console", Monaco, monospace;
+}
 
 #quickbar-wrapper {
   /*text-transform: lowercase;*/

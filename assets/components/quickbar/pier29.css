@@ -6,11 +6,11 @@
 /* start layout */
 /* properties */
 #quickbar-wrapper * {
-  -webkit-box-sizing: border-box "";
-  -moz-box-sizing: border-box "";
-  -o-box-sizing: border-box "";
-  -ms-box-sizing: border-box "";
-  box-sizing: border-box ""; }
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  -ms-box-sizing: border-box ;
+  box-sizing: border-box ; }
 
 #quickbar-wrapper {
   height: 4px;
@@ -41,7 +41,7 @@
 #quickbar-wrapper .quickbar ul li {
   white-space: nowrap;
   display: inline-block;
-  padding: 2px 8px 1px 8px;
+  padding: 4px 8px 1px 8px;
   height: 24px;
   margin-right: 4px; }
 
@@ -58,10 +58,10 @@
 /* start style */
 /* properties */
 #quickbar-wrapper .quickbar {
-  border-bottom: 4px solid #9ac54f;
-  background: #131313;
-  background: rgba(19, 19, 19, 0.96);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid #ab4f3b;
+  background: #9dbacc;
+  background: #9dbacc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 160ms ease-in;
   -moz-transition: all 160ms ease-in;
   -o-transition: all 160ms ease-in;
@@ -73,15 +73,15 @@
     transition: all 240ms ease-in; }
 
 #quickbar-wrapper .quickbar ul {
-  color: white; }
+  color: #a09547; }
   #quickbar-wrapper .quickbar ul li {
-    text-shadow: #263816 0 1px 0;
-    border-top: 1px solid #8abf5b;
-    border-bottom: 1px solid black;
-    font-size: 13px;
+    text-shadow: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid #f9e612;
+    font-size: 12px;
     border-radius: 4px;
     opacity: 0.99;
-    font-weight: bold;
+    font-weight: normal;
     background-color: #5D8A36;
     cursor: pointer;
     -webkit-box-sizing: border-box !important;
@@ -92,11 +92,22 @@
     #quickbar-wrapper .quickbar ul li a {
       color: inherit;
       text-decoration: none;
-      font-family: "Helvetica, Arial, sans-serif";
       letter-spacing: 0; }
       #quickbar-wrapper .quickbar ul li a:visited {
         color: inherit;
         text-decoration: none; }
+
+#quickbar-wrapper {
+  font-family: "Lucida Console", Monaco, monospace; }
+
+#quickbar-wrapper {
+  text-transform: lowercase; }
+  #quickbar-wrapper .quickbar {
+    background-image: -webkit-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 4px, transparent 4px, transparent 8px);
+    background-image: -moz-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 10px, transparent 10px, transparent 20px);
+    background-image: -ms-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 10px, transparent 10px, transparent 20px);
+    background-image: repeating-linear-gradient(45deg, #9dbacc 0px, rgba(242, 238, 232, 0.1) 2px, transparent 2px, transparent 4px);
+    background-size: 40px 40px; }
 
 /* add a gradient and a rollover effect */
 #quickbar-wrapper .quickbar ul li {
@@ -104,13 +115,10 @@
   -moz-transition: all 240ms ease-out;
   -o-transition: all 240ms ease-out;
   transition: all 240ms ease-out;
-  background-image: -webkit-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: -moz-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: -ms-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: -o-linear-gradient(180deg, #70a641 42%, #4b6f2b 100%);
-  background-image: linear-gradient(180deg, #70a641 42%, #4b6f2b 100%); }
+  background: #FEFBD9;
+  /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/ }
   #quickbar-wrapper .quickbar ul li:hover {
-    color: white;
-    opacity: 0.86; }
+    color: #7d7437;
+    /*opacity: 0.86;*/ }
 
 /* end style */

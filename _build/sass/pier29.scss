@@ -7,9 +7,10 @@
 
 $sliverH:4px;
 
-$white:white;
-$offwhite:#ECECEC;
+$white:#F2EEE8;
 $black:black;
+$blue:#5A8AA9;
+$green:#85E349;
 
 
 /* start layout */
@@ -29,18 +30,20 @@ $buttonP:4px 8px 1px 8px;
 );
 /* end layout */
 
+
+
 /* start style */
 /* properties */
-$borderB:rgb(70,70,70);
-$barBGL:rgb(30,30,30);
-$barBG:rgba(30,30,30,0.96);
+$textColor:darken(#B9AE61,10%);
+$borderB:#AB4F3B;
+$barBGL:lighten($blue,20%);
+$barBG:lighten($blue,20%);
 $barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
-$textColor:rgb(200,200,200);
 $textShadow:none;
-$buttonHighlight:rgb(100,100,100);
-$buttonLowLight:black;
+$buttonHighlight:lighten(#FEFBD9,90%);
+$buttonLowLight:darken(#FEFBD9,40%);
 $fontWeight:normal;
-$fontSize:12px;
+$fontSize:12px; 
 
 $buttonGradientFrom:rgb(72,72,72) 42%;
 $buttonGradientTo:rgb(72,72,72) 100%;
@@ -66,17 +69,24 @@ $buttonGradientTo:rgb(72,72,72) 100%;
 
 #quickbar-wrapper {
   text-transform: lowercase;
+  .quickbar {
+background-image: -webkit-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 4px, transparent 4px, transparent 8px);
+background-image: -moz-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 10px, transparent 10px, transparent 20px);
+background-image: -ms-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 10px, transparent 10px, transparent 20px);
+background-image: repeating-linear-gradient(45deg, $barBG 0px, rgba($white,0.1) 2px, transparent 2px, transparent 4px);
+background-size:40px 40px;
+  }
 }
 
 /* add a gradient and a rollover effect */
 #quickbar-wrapper .quickbar ul {
   li {
     @include transition(all, 240ms, ease-out);
-    background:$buttonGradientFrom;
+    background:#FEFBD9;
     /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/
     &:hover {
-      color: $white;
-      opacity: 0.86;
+      color: darken(#B9AE61,20%);
+      /*opacity: 0.86;*/
     }
   }
 }

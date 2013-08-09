@@ -10,8 +10,7 @@
   $buttonLowLight:black,
   $fontWeight:bold,
   $borderBH:$sliverH,
-  $fontFamily:"Helvetica, Arial, sans-serif",
-  $fontSize:13px
+  $fontSize:12px
 ) {
     #quickbar-wrapper .quickbar {
       border-bottom: $borderBH solid $borderB;
@@ -39,7 +38,6 @@
         a {
           color: inherit;
           text-decoration: none;
-          font-family: $fontFamily; 
           letter-spacing: 0;
           &:visited {
             color: inherit;
@@ -48,4 +46,10 @@
         }
       }
     }
+}
+
+@mixin quickbar-fontfamily {
+  #quickbar-wrapper {
+    @content;
+  }
 }
