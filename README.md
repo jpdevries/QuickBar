@@ -11,3 +11,36 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ## Themeing
 ### Aquanight
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/aquanight.png)
+
+### Clouds
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/clouds.png)
+
+### Interverse Light
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
+
+### Interverse
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse.png)
+
+### MODX
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx.png)
+
+### Pier 29
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pier29.png)
+
+### Pier 31
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pier31.png)
+
+### Purple Night
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/purplenight.png)
+
+### Retro
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro.png)
+
+### Soda Dark
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sodadark.png)
+
+### Sublime
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sublime.png)
+
+### Subtractive
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/subtractive.png)
