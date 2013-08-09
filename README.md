@@ -45,6 +45,9 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ## Creating a Theme
 Themes are written using Object-Oriented Sass. Below is an example of the aquanights theme. Simply clone an existing theme and change properties, and override styles if you need to. Or, if you want to go old school grab some [example css](https://gist.github.com/jpdevries/16aa30688636fd1c2f4e). Once your stylesheet is ready, simply update the quickbar.css System Setting to point to your custom theme.
 
+##Contributing Themes
+Submit me a pull request with your coolest themes and I will add them!
+
 ## Using the Sass Component
 If you are up and running on Sass, creating themes couldn't be easier. Here's a look at how the aquanight works.
 ````
