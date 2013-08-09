@@ -22,7 +22,7 @@
   position: fixed;
   top: -36px;
   left: 0;
-  z-index: 10000;
+  z-index: 100001;
   text-align: left; }
 
 #quickbar-wrapper .quickbar:hover {
@@ -30,7 +30,7 @@
 
 #quickbar-wrapper .quickbar ul {
   margin: 0;
-  padding: 6px;
+  padding: 9px;
   width: 100%;
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;

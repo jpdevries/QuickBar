@@ -58,9 +58,9 @@
 /* start style */
 /* properties */
 #quickbar-wrapper .quickbar {
-  border-bottom: 4px solid #ab4f3b;
-  background: #9dbacc;
-  background: #9dbacc;
+  border-bottom: 4px solid #97bae1;
+  background: #e6eff8;
+  background: #d6e4f3;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 160ms ease-in;
   -moz-transition: all 160ms ease-in;
@@ -73,7 +73,7 @@
     transition: all 240ms ease-in; }
 
 #quickbar-wrapper .quickbar ul {
-  color: #a09547; }
+  color: #cd6447; }
   #quickbar-wrapper .quickbar ul li {
     text-shadow: none;
     border-top: 1px solid white;
@@ -112,7 +112,7 @@
   background: #FEFBD9;
   /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/ }
   #quickbar-wrapper .quickbar ul li:hover {
-    color: #7d7437;
-    /*opacity: 0.86;*/ }
+    color: #cd6447;
+    opacity: 0.86; }
 
 /* end style */

@@ -102,6 +102,12 @@
 
 #quickbar-wrapper {
   text-transform: lowercase; }
+  #quickbar-wrapper .quickbar {
+    background-image: -webkit-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 4px, transparent 4px, transparent 8px);
+    background-image: -moz-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 10px, transparent 10px, transparent 20px);
+    background-image: -ms-repeating-linear-gradient(45deg, #8dcbed 0px, #8dcbed 10px, transparent 10px, transparent 20px);
+    background-image: repeating-linear-gradient(45deg, #9dbacc 0px, rgba(242, 238, 232, 0.1) 2px, transparent 2px, transparent 4px);
+    background-size: 40px 40px; }
 
 /* add a gradient and a rollover effect */
 #quickbar-wrapper .quickbar ul li {

@@ -67,7 +67,7 @@ $black:black;
 $sliverH:4px;
 $barH:40px;
 $buttonH:24px;
-$barPadding:9px;
+$barPadding:6px;
 $buttonP:4px 8px 1px 8px;
 
 @include quickbar-layout(

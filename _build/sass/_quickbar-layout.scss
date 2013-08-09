@@ -5,7 +5,7 @@
 $sliverH:4px,
 $barH:40px,
 $buttonH:24px,
-$barPadding:9px,
+$barPadding:6px,
 $buttonP:2px 8px 1px 8px,
 $barOffset:0
 ) {
@@ -20,7 +20,7 @@ $barOffset:0
     width: 100%;
     height: $barH;
     position: fixed;
-    top: -$barH + $barOffset;
+    top: -$barH + $sliverH + $barOffset;
     left: 0;
     z-index: 10000;
     text-align: left;
