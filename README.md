@@ -34,7 +34,7 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/purplenight.png)
 
 ### Retro
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro.png)
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro%20copy.png)
 
 ### Soda Dark
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sodadark.png)
