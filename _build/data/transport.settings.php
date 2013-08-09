@@ -12,7 +12,19 @@ $settingSource = array(
     'css' => array(
         'area' => 'Theme',
         'value' => '[[++assets_url]]components/quickbar/retro.css',
-    )
+    ),
+    'help' => array(
+        'area' => 'Toolbar',
+        'value' => false,
+    ),
+    'helplink' => array(
+        'area' => 'Toolbar',
+        'value' => 'http://rtfm.modx.com/display/revolution20/An+Overview+of+MODX',
+    ),
+   'helptarget' => array(
+    'area' => 'Toolbar',
+    'value' => '_blank',
+),
 );
 
 $settings = array();
