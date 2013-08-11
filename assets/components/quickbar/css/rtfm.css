@@ -59,9 +59,9 @@
 /* start style */
 /* properties */
 #quickbar-wrapper .quickbar {
-  border-bottom: 4px solid #f6bcb5;
-  background: #92daf3;
-  background: #92daf3;
+  border-bottom: 4px solid #f0f0f0;
+  background: #183e52;
+  background: #183e52;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 160ms ease-in;
   -moz-transition: all 160ms ease-in;
@@ -74,11 +74,11 @@
     transition: all 240ms ease-in; }
 
 #quickbar-wrapper .quickbar ul {
-  color: #7ac9f3; }
+  color: #115174; }
   #quickbar-wrapper .quickbar ul li {
     text-shadow: none;
     border-top: 1px solid white;
-    border-bottom: 1px solid #f9e612;
+    border-bottom: 1px solid #b0a593;
     font-size: 12px;
     border-radius: 4px;
     opacity: 0.99;
@@ -104,11 +104,11 @@
 #quickbar-wrapper {
   text-transform: lowercase; }
   #quickbar-wrapper .quickbar {
-    background-image: -webkit-repeating-linear-gradient(90deg, #b0f1f3 0px, #b0f1f3 4px, transparent 4px, transparent 8px);
-    background-image: -moz-repeating-linear-gradient(90deg, #b0f1f3 0px, #b0f1f3 4px, transparent 4px, transparent 8px);
-    background-image: -ms-repeating-linear-gradient(90deg, #b0f1f3 0px, #b0f1f3 4px, transparent 4px, transparent 8px);
-    background-image: repeating-linear-gradient(90deg, #92daf3 0px, rgba(242, 238, 232, 0.1) 4px, transparent 4px, transparent 8px);
-    background-size: 40px 40px; }
+    background-image: -webkit-radial-gradient(circle, #115174 20%, #183e52 60%);
+    background-image: -moz-radial-gradient(circle, #115174 20%, #183e52 60%);
+    background-image: -ms-radial-gradient(circle, #115174 20%, #183e52 60%);
+    background-image: -o-radial-gradient(circle, #115174 20%, #183e52 60%);
+    background-image: radial-gradient(circle, #115174 20%, #183e52 60%); }
 
 /* add a gradient and a rollover effect */
 #quickbar-wrapper .quickbar ul li {
@@ -116,10 +116,8 @@
   -moz-transition: all 240ms ease-out;
   -o-transition: all 240ms ease-out;
   transition: all 240ms ease-out;
-  background: #F3EFD7;
-  /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/ }
+  background: #F2EBE6; }
   #quickbar-wrapper .quickbar ul li:hover {
-    color: #7d7437;
-    /*opacity: 0.86;*/ }
+    background: #FCFCFC; }
 
 /* end style */

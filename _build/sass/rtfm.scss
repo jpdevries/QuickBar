@@ -7,10 +7,8 @@
 
 $sliverH:4px;
 
-$white:#F2EEE8;
+$white:white;
 $black:black;
-$blue:#92DAF3;
-$green:#85E349;
 
 
 /* start layout */
@@ -30,23 +28,21 @@ $buttonP:4px 8px 1px 8px;
 );
 /* end layout */
 
-
-
 /* start style */
 /* properties */
-$textColor:#7AC9F3;
-$borderB:#F6BCB5;
-$barBGL:$blue;
-$barBG:$blue;
+$borderB:#F0F0F0;
+$barBGL:#183E52;
+$barBG:#183E52;
 $barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
+$textColor:#115174;
 $textShadow:none;
-$buttonHighlight:lighten(#FEFBD9,90%);
-$buttonLowLight:darken(#FEFBD9,40%);
+$buttonHighlight:lighten(#F2EBE6,90%);
+$buttonLowLight:darken(#DBD6CE,20%);
 $fontWeight:normal;
-$fontSize:12px; 
+$fontSize:12px;
 
-$buttonGradientFrom:rgb(72,72,72) 42%;
-$buttonGradientTo:rgb(72,72,72) 100%; 
+$buttonGradientFrom:#115174 20%;
+$buttonGradientTo:#183E52 60%;
 
 @include quickbar-style( /* call quickbar component, pass in properties */
   $textColor,
@@ -70,11 +66,7 @@ $buttonGradientTo:rgb(72,72,72) 100%;
 #quickbar-wrapper {
   text-transform: lowercase;
   .quickbar {
-background-image: -webkit-repeating-linear-gradient(90deg, #B0F1F3 0px, #B0F1F3 4px, transparent 4px, transparent 8px);
-background-image: -moz-repeating-linear-gradient(90deg, #B0F1F3 0px, #B0F1F3 4px, transparent 4px, transparent 8px);
-background-image: -ms-repeating-linear-gradient(90deg, #B0F1F3 0px, #B0F1F3 4px, transparent 4px, transparent 8px);
-background-image: repeating-linear-gradient(90deg, $barBG 0px, rgba($white,0.1) 4px, transparent 4px, transparent 8px);
-background-size:40px 40px;
+    @include gradient( background-image, radial-gradient(circle, $buttonGradientFrom, $buttonGradientTo ) );
   }
 }
 
@@ -82,11 +74,11 @@ background-size:40px 40px;
 #quickbar-wrapper .quickbar ul {
   li {
     @include transition(all, 240ms, ease-out);
-    background:#F3EFD7;
-    /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/
+    background:#F2EBE6;
+    
     &:hover {
-      color: darken(#B9AE61,20%);
-      /*opacity: 0.86;*/
+      
+      background:#FCFCFC;
     }
   }
 }
