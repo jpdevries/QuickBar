@@ -73,7 +73,7 @@ Supports Articles, meaning if you are viewing an Article Container, clicking Cre
 ### retro
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro%20copy.png)
 
-### fungi
+### funguy
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/fungi.png)
 
 ### dallas
