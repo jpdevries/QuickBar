@@ -9,41 +9,77 @@ Supports Articles, meaning if you are viewing an Article Container, clicking Cre
 This is the initial commit so leaving the 'pieces' of the addon as Chunks and Snippets viewable in the admin. Overtime, may move them to be more behind the scenes.
 
 ## Included Themes
-### Aquanight
+### aquanight
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/aquanight.png)
 
-### Clouds
+### clouds
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/clouds.png)
 
-### Interverse Light
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
+### html5
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/html5.png)
 
-### Interverse
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse.png)
+### sassy
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sassy.png)
 
-### MODX
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx.png)
-
-### Pier 29
+### pier29
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pier29.png)
 
-### Pier 31
+### pier31
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pier31.png)
 
-### Purple Night
+### purplenight
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/purplenight.png)
 
-### Retro
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro%20copy.png)
-
-### Sublime
+### sublime
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sublime.png)
 
-### Subtractive
+### trycatch
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/trycatch.png)
+
+### pedometer
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pedometer.png)
+
+### stork
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/stork.png)
+
+### taos
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/taos.png)
+
+### mirage
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/mirage.png)
+
+### modx
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx_2.png)
+
+### interverse-light
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
+
+### interverse
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse.png)
+
+### subtractive
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/subtractive.png)
+
+### additive
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/additive.png)
+
+### fpo
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/fpo.png)
+
+### retro
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro%20copy.png)
+
+### fungi
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/fungi.png)
+
+### dallas
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/dallas.png)
 
 ## Creating a Theme
 Themes are written using Object-Oriented Sass. Below is an example of the aquanights theme. Simply clone an existing theme and change properties, and override styles if you need to. Or, if you want to go old school grab some [example css](https://gist.github.com/jpdevries/16aa30688636fd1c2f4e). Once your stylesheet is ready, simply update the quickbar.css System Setting to point to your custom theme.
+
+##Contributing Themes
+Submit me a pull request with your coolest themes and I will add them!
 
 ## Using the Sass Component
 If you are up and running on Sass, creating themes couldn't be easier. Here's a look at how the aquanight works.
