@@ -9,7 +9,7 @@ Supports Articles, meaning if you are viewing an Article Container, clicking Cre
 This is the initial commit so leaving the 'pieces' of the addon as Chunks and Snippets viewable in the admin. Overtime, may move them to be more behind the scenes.
 
 ## Included Themes
-### Aquanight
+### Aqua Night
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/aquanight.png)
 
 ### Clouds
