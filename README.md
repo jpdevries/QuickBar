@@ -1,12 +1,16 @@
 #Quickbar
 
-QuickBar adds an Evo-style Quick Edit bar to the front end of your site. For logged in users only of course.
+QuickBar adds a ~~Evo-style~~ custom styled Quick Edit bar to the front end of your site. For logged in users only of course.
 
-You'll see a thin green strip at the top. Hovering over it will slide down a bar with Edit Resource, Dashboard and Create Here buttons.
+You'll see a thin strip at the top. Hovering over it will slide down a bar with Edit Resource, Dashboard and Create Here buttons.
 
 Supports Articles, meaning if you are viewing an Article Container, clicking Create Here, will take you to a page to create a new Article within that container. If you are viewing an Article, you'll be taken to a page to create a new Article in the same Article Container.
 
-This is the initial commit so leaving the 'pieces' of the addon as Chunks and Snippets viewable in the admin. Overtime, may move them to be more behind the scenes.
+## Table of Contents
+* [Included Themes](#included-themes)
+* [Creating a Theme](#creating-a-theme)
+* [Contributing Themes](#contributing-themes)
+* [Using the Sass Component](#using-the-sass-component)
 
 ## Included Themes
 ### aquanight
@@ -80,6 +84,17 @@ Themes are written using Object-Oriented Sass. Below is an example of the aquani
 
 ##Contributing Themes
 Submit me a pull request with your coolest themes and I will add them!
+
+Working on switching to grunt but right now best way to create a theme now is:
+
+ * checkout develop branch
+ * create codekit project of repo
+ * enable project level settings
+ * apply project defaults from _build/codekit-config.json
+ * duplicate a scss file in _build/sass
+ * make changes and ensure sass is compiling to assets/components/quickbar/css/
+
+If you aren't using Codekit, just make sure your sass builds to the correct location.
 
 ## Using the Sass Component
 If you are up and running on Sass, creating themes couldn't be easier. Here's a look at how the aquanight works.
