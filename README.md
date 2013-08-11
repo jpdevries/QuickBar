@@ -51,6 +51,9 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ### modx
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx_2.png)
 
+### rtfm
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/rtfm.png)
+
 ### interverse-light
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
 
