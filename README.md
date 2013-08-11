@@ -33,6 +33,9 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ### sublime
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sublime.png)
 
+### trycatch
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/trycatch.png)
+
 ### pedometer
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pedometer.png)
 
