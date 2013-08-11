@@ -46,7 +46,7 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/mirage.png)
 
 ### MODX
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx.png)
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx_2.png)
 
 ### Interverse Light
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
