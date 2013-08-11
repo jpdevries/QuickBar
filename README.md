@@ -15,14 +15,17 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ### Clouds
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/clouds.png)
 
+### HTML5
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/html5.png)
+
+### Sassy
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sassy.png)
+
 ### Interverse Light
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
 
 ### Interverse
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse.png)
-
-### MODX
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx.png)
 
 ### Pier 29
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pier29.png)
@@ -45,14 +48,11 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ### Additive
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/additive.png)
 
-### HTML5
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/html5.png)
-
-### Sassy
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sassy.png)
-
 ### FPO
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/fpo.png)
+
+### MODX
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx.png)
 
 ## Creating a Theme
 Themes are written using Object-Oriented Sass. Below is an example of the aquanights theme. Simply clone an existing theme and change properties, and override styles if you need to. Or, if you want to go old school grab some [example css](https://gist.github.com/jpdevries/16aa30688636fd1c2f4e). Once your stylesheet is ready, simply update the quickbar.css System Setting to point to your custom theme.
