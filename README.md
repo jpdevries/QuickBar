@@ -49,7 +49,7 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/mirage.png)
 
 ### modx
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx_2.png)
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx_3.png)
 
 ### rtfm
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/rtfm.png)
