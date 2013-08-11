@@ -9,67 +9,67 @@ Supports Articles, meaning if you are viewing an Article Container, clicking Cre
 This is the initial commit so leaving the 'pieces' of the addon as Chunks and Snippets viewable in the admin. Overtime, may move them to be more behind the scenes.
 
 ## Included Themes
-### Aqua Night
+### aquanight
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/aquanight.png)
 
-### Clouds
+### clouds
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/clouds.png)
 
-### HTML5
+### html5
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/html5.png)
 
-### Sassy
+### sassy
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sassy.png)
 
-### Pier 29
+### pier29
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pier29.png)
 
-### Pier 31
+### pier31
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pier31.png)
 
-### Purple Night
+### purplenight
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/purplenight.png)
 
-### Sublime
+### sublime
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sublime.png)
 
-### Pedometer
+### pedometer
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pedometer.png)
 
-### Stork
+### stork
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/stork.png)
 
-### Taos
+### taos
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/taos.png)
 
-### Mirage
+### mirage
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/mirage.png)
 
-### MODX
+### modx
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx_2.png)
 
-### Interverse Light
+### interverse-light
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
 
-### Interverse
+### interverse
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse.png)
 
-### Subtractive
+### subtractive
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/subtractive.png)
 
-### Additive
+### additive
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/additive.png)
 
-### FPO
+### fpo
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/fpo.png)
 
-### Retro
+### retro
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro%20copy.png)
 
-### Fungi
+### fungi
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx.png)
 
-### Dallas
+### dallas
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/dallas.png)
 
 ## Creating a Theme
