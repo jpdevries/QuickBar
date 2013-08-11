@@ -69,7 +69,7 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ### retro
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/retro%20copy.png)
 
-### fungi
+### funguy
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/fungi.png)
 
 ### dallas
