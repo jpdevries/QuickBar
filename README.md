@@ -40,7 +40,7 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pedometer.png)
 
 ### stork
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/stork.png)
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/stork_2.png)
 
 ### taos
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/taos.png)
