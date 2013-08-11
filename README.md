@@ -33,6 +33,21 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ### Sublime
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sublime.png)
 
+### Pedometer
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/pedometer.png)
+
+### Stork
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/stork.png)
+
+### Taos
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/taos.png)
+
+### Mirage
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/mirage.png)
+
+### MODX
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/modx.png)
+
 ### Interverse Light
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/interverse-light.png)
 
