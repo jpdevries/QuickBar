@@ -11,15 +11,6 @@ $white:white;
 $offwhite:#ECECEC;
 $black:black;
 
-$blue:#00ADD8;
-$lightBlue:#87C5E1;
-$darkBlue:darken($blue,20%);
-$red:#EC341F;
-$orange:#FC8843;
-$green:#4D9C41;
-$lightGreen:#ACCB4B;
-$mixBlueGreen:#27853F;
-$lightOrange:#F9793E;
 
 /* start layout */
 /* properties */
@@ -28,35 +19,31 @@ $barH:40px;
 $buttonH:24px;
 $barPadding:6px;
 $buttonP:4px 8px 1px 8px;
-$barOffset:4px;
 
 @include quickbar-layout(
   $sliverH,
   $barH,
   $buttonH,
   $barPadding,
-  $buttonP,
-  $barOffset
+  $buttonP
 );
 /* end layout */
 
 /* start style */
 /* properties */
-$borderB:$green;
-$barBGL:$lightBlue;
-$barBG:$lightBlue;
+$borderB:#98D523;
+$barBGL:rgb(30,30,30);
+$barBG:rgba(30,30,30,0.96);
 $barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
-$textColor:$white;
+$textColor:#D33232;
 $textShadow:none;
-$buttonHighlight:$lightBlue;
-$buttonLowLight:darken($blue,10%);
-$fontWeight:normal;  
-$borderBH:4px;
-$fontFamily:"Lucida Console", Monaco, monospace;
+$buttonHighlight:rgb(100,100,100);
+$buttonLowLight:black;
+$fontWeight:normal;
 $fontSize:12px;
 
-$buttonGradientFrom:$lightBlue 42%;
-$buttonGradientTo:$blue 100%;
+$buttonGradientFrom:#4CC9D8 42%;
+$buttonGradientTo:#4CC9D8 100%;
 
 @include quickbar-style( /* call quickbar component, pass in properties */
   $textColor,
@@ -69,7 +56,7 @@ $buttonGradientTo:$blue 100%;
   $buttonHighlight,
   $buttonLowLight,
   $fontWeight,
-  $borderBH,
+  $sliverH,
   $fontSize
 ); 
 
@@ -77,37 +64,20 @@ $buttonGradientTo:$blue 100%;
   font-family:"Lucida Console", Monaco, monospace;
 }
 
-
+#quickbar-wrapper {
+  text-transform: lowercase;
+}
 
 /* add a gradient and a rollover effect */
 #quickbar-wrapper .quickbar ul {
   li {
     @include transition(all, 240ms, ease-out);
-    background:$blue;
-    opacity:1;
+    background:$buttonGradientFrom;
+    /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/
     &:hover {
-      color:$blue;
-      background:white;
-      opacity:1;
-    }
-    &:first-of-type {
-
+      color: $white;
+      opacity: 0.86;
     }
   }
 }
-
-/*#quickbar-wrapper {
-  &:hover {
-    .quickbar {
-      background:$lightOrange;
-      ul {
-        li {
-          background:orange;
-          color:red;
-        }
-      }
-    }
-  }
-}*/
-
 /* end style */

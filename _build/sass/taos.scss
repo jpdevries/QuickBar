@@ -11,15 +11,9 @@ $white:white;
 $offwhite:#ECECEC;
 $black:black;
 
-$blue:#00ADD8;
-$lightBlue:#87C5E1;
-$darkBlue:darken($blue,20%);
-$red:#EC341F;
-$orange:#FC8843;
-$green:#4D9C41;
-$lightGreen:#ACCB4B;
-$mixBlueGreen:#27853F;
-$lightOrange:#F9793E;
+$a:#6CC9CF; 
+$c:#75BBA8;
+$b:#D7BCA0;
 
 /* start layout */
 /* properties */
@@ -42,21 +36,20 @@ $barOffset:4px;
 
 /* start style */
 /* properties */
-$borderB:$green;
-$barBGL:$lightBlue;
-$barBG:$lightBlue;
+$borderB:darken($c,4%);
+$barBGL:$b;
+$barBG:$b;
 $barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
-$textColor:$white;
+$textColor:white;
 $textShadow:none;
-$buttonHighlight:$lightBlue;
-$buttonLowLight:darken($blue,10%);
+$buttonHighlight:$c;
+$buttonLowLight:darken($c,20%);
 $fontWeight:normal;  
 $borderBH:4px;
 $fontFamily:"Lucida Console", Monaco, monospace;
 $fontSize:12px;
 
-$buttonGradientFrom:$lightBlue 42%;
-$buttonGradientTo:$blue 100%;
+
 
 @include quickbar-style( /* call quickbar component, pass in properties */
   $textColor,
@@ -83,11 +76,11 @@ $buttonGradientTo:$blue 100%;
 #quickbar-wrapper .quickbar ul {
   li {
     @include transition(all, 240ms, ease-out);
-    background:$blue;
+    background:$c;
     opacity:1;
     &:hover {
-      color:$blue;
-      background:white;
+      /*color:$c;*/
+      background:lighten($c,8%);
       opacity:1;
     }
     &:first-of-type {

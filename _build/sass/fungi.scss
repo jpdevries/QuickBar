@@ -19,7 +19,6 @@ $orange:#FC8843;
 $green:#4D9C41;
 $lightGreen:#ACCB4B;
 $mixBlueGreen:#27853F;
-$lightOrange:#F9793E;
 
 /* start layout */
 /* properties */
@@ -43,15 +42,15 @@ $barOffset:4px;
 /* start style */
 /* properties */
 $borderB:$green;
-$barBGL:$lightBlue;
-$barBG:$lightBlue;
+$barBGL:rgb(20,20,20);
+$barBG:rgba(20,20,20,0.96);
 $barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
-$textColor:$white;
+$textColor:$blue;
 $textShadow:none;
 $buttonHighlight:$lightBlue;
-$buttonLowLight:darken($blue,10%);
+$buttonLowLight:darken($blue,20%);
 $fontWeight:normal;  
-$borderBH:4px;
+$borderBH:0;
 $fontFamily:"Lucida Console", Monaco, monospace;
 $fontSize:12px;
 
@@ -77,37 +76,27 @@ $buttonGradientTo:$blue 100%;
   font-family:"Lucida Console", Monaco, monospace;
 }
 
-
+#quickbar-wrapper {
+  /*text-transform: lowercase;*/
+  .quickbar {
+    @include gradient( background-image, linear-gradient(45deg, $lightBlue 40%,  $blue 50%,  $green 66%, $orange 82%, $red 100% ) );
+  }
+}
 
 /* add a gradient and a rollover effect */
 #quickbar-wrapper .quickbar ul {
   li {
     @include transition(all, 240ms, ease-out);
-    background:$blue;
-    opacity:1;
+    background:rgb(250,250,250);
+    background:rgba(250,250,250,0.76);
+    opacity:0.86;
     &:hover {
-      color:$blue;
-      background:white;
-      opacity:1;
+      color: $orange;
+      opacity:0.99;
     }
     &:first-of-type {
 
     }
   }
 }
-
-/*#quickbar-wrapper {
-  &:hover {
-    .quickbar {
-      background:$lightOrange;
-      ul {
-        li {
-          background:orange;
-          color:red;
-        }
-      }
-    }
-  }
-}*/
-
 /* end style */
