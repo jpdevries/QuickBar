@@ -43,7 +43,7 @@ This is the initial commit so leaving the 'pieces' of the addon as Chunks and Sn
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/stork_2.png)
 
 ### sherbert
-![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sherbert.png)
+![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/sherbert_2.png)
 
 ### taos
 ![](http://jpdevries.s3.amazonaws.com/assets/uploads/quickbar/taos.png)
