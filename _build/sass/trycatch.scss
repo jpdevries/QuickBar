@@ -1,0 +1,82 @@
+@import "box-sizing";
+@import "transition";
+@import "gradients";
+
+@import "quickbar-layout";
+@import "quickbar-style";
+
+$sliverH:4px;
+
+$white:white;
+$black:black;
+
+
+/* start layout */
+/* properties */
+$sliverH:4px;
+$barH:40px;
+$buttonH:24px;
+$barPadding:6px;
+$buttonP:4px 8px 1px 8px;
+
+@include quickbar-layout(
+  $sliverH,
+  $barH,
+  $buttonH,
+  $barPadding,
+  $buttonP
+);
+/* end layout */
+
+/* start style */
+/* properties */
+$borderB:#C1C2E2;
+$barBGL:#DBD6CE;
+$barBG:#DBD6CE;
+$barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
+$textColor:darken(#C1C2E2,20%);
+$textShadow:none;
+$buttonHighlight:lighten(#F2EBE6,90%);
+$buttonLowLight:darken(#DBD6CE,20%);
+$fontWeight:normal;
+$fontSize:12px;
+
+$buttonGradientFrom:rgb(72,72,72) 42%;
+$buttonGradientTo:rgb(72,72,72) 100%;
+
+@include quickbar-style( /* call quickbar component, pass in properties */
+  $textColor,
+  $borderB,
+  $barBGL,
+  $barBG,
+  $barShadow,
+  $textColor,
+  $textShadow,
+  $buttonHighlight,
+  $buttonLowLight,
+  $fontWeight,
+  $sliverH,
+  $fontSize
+); 
+
+@include quickbar-fontfamily {
+  font-family:"Lucida Console", Monaco, monospace;
+}
+
+#quickbar-wrapper {
+  text-transform: lowercase;
+}
+
+/* add a gradient and a rollover effect */
+#quickbar-wrapper .quickbar ul {
+  li {
+    @include transition(all, 240ms, ease-out);
+    background:#F2EBE6;
+    /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/
+    &:hover {
+      
+      background:#FCFCFC;
+    }
+  }
+}
+/* end style */

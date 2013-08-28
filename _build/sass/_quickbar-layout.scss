@@ -1,0 +1,56 @@
+/* layout variables */
+
+
+@mixin quickbar-layout(
+$sliverH:4px,
+$barH:40px,
+$buttonH:24px,
+$barPadding:6px,
+$buttonP:2px 8px 1px 8px,
+$barOffset:0
+) {
+  #quickbar-wrapper * {
+    @include box-sizing(); 
+  }
+  #quickbar-wrapper {
+    height: $sliverH;
+    overflow: visible;
+  }
+  #quickbar-wrapper .quickbar {
+    width: 100%;
+    height: $barH;
+    position: fixed;
+    top: -$barH + $sliverH + $barOffset;
+    left: 0;
+    z-index: 10000;
+    text-align: left;
+  }
+  #quickbar-wrapper .quickbar:hover {
+      top: 0;
+  }
+  #quickbar-wrapper .quickbar ul {
+    margin: 0;
+    padding:$barPadding;
+    width: 100%;
+    @include box-sizing(border-box, !important);
+  }
+  #quickbar-wrapper .quickbar ul li {
+    white-space:nowrap;
+    display: inline-block;
+    padding: $buttonP;
+    height: $buttonH;
+    margin-right: 4px;
+  }
+  #quickbar-wrapper .quickbar ul li.help {
+    float: right;
+  }
+  .touch #quickbar-wrapper .quickbar {
+    top: 0;
+  }
+  @media only screen and (max-width: 480px) {
+    .quickbar {
+      top: 0;
+    }
+  }
+}
+

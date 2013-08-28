@@ -1,5 +1,11 @@
 Changelog for QuickBar integration into MODx Revolution.
 
+QuickBar 1.0.0
+====================================
+ - Reduced elements Quickbar adds to tree
+ - Added 25 themes to choose from! See assets/components/quickbar/css
+ - Changed default theme
+
 QuickBar 0.5.6
 ====================================
  - Now using id rather than class for quickbar-wrapper

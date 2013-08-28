@@ -1,0 +1,118 @@
+/**
+ * Usage:
+ * @include gradient( background-image, linear-gradient(180deg, rgba(23,66,89,0.8) 42%, transparent 100% ) );
+ */
+/* layout variables */
+/* start layout */
+/* properties */
+#quickbar-wrapper * {
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  -ms-box-sizing: border-box ;
+  box-sizing: border-box ; }
+
+#quickbar-wrapper {
+  height: 4px;
+  overflow: visible; }
+
+#quickbar-wrapper .quickbar {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: -36px;
+  left: 0;
+  z-index: 10000;
+  text-align: left; }
+
+#quickbar-wrapper .quickbar:hover {
+  top: 0; }
+
+#quickbar-wrapper .quickbar ul {
+  margin: 0;
+  padding: 6px;
+  width: 100%;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -o-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+#quickbar-wrapper .quickbar ul li {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 4px 8px 1px 8px;
+  height: 24px;
+  margin-right: 4px; }
+
+#quickbar-wrapper .quickbar ul li.help {
+  float: right; }
+
+.touch #quickbar-wrapper .quickbar {
+  top: 0; }
+
+@media only screen and (max-width: 480px) {
+  .quickbar {
+    top: 0; } }
+/* end layout */
+/* start style */
+/* properties */
+#quickbar-wrapper .quickbar {
+  border-bottom: 4px solid #ab4f3b;
+  background: #9dbacc;
+  background: #9dbacc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 160ms ease-in;
+  -moz-transition: all 160ms ease-in;
+  -o-transition: all 160ms ease-in;
+  transition: all 160ms ease-in; }
+  #quickbar-wrapper .quickbar:hover {
+    -webkit-transition: all 240ms ease-in;
+    -moz-transition: all 240ms ease-in;
+    -o-transition: all 240ms ease-in;
+    transition: all 240ms ease-in; }
+
+#quickbar-wrapper .quickbar ul {
+  color: #a09547; }
+  #quickbar-wrapper .quickbar ul li {
+    text-shadow: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid #f9e612;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0.99;
+    font-weight: normal;
+    background-color: #5D8A36;
+    cursor: pointer;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -o-box-sizing: border-box !important;
+    -ms-box-sizing: border-box !important;
+    box-sizing: border-box !important; }
+    #quickbar-wrapper .quickbar ul li a {
+      color: inherit;
+      text-decoration: none;
+      letter-spacing: 0; }
+      #quickbar-wrapper .quickbar ul li a:visited {
+        color: inherit;
+        text-decoration: none; }
+
+#quickbar-wrapper {
+  font-family: "Lucida Console", Monaco, monospace; }
+
+#quickbar-wrapper {
+  text-transform: lowercase; }
+
+/* add a gradient and a rollover effect */
+#quickbar-wrapper .quickbar ul li {
+  -webkit-transition: all 240ms ease-out;
+  -moz-transition: all 240ms ease-out;
+  -o-transition: all 240ms ease-out;
+  transition: all 240ms ease-out;
+  background: #FEFBD9;
+  /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/ }
+  #quickbar-wrapper .quickbar ul li:hover {
+    color: #7d7437;
+    /*opacity: 0.86;*/ }
+
+/* end style */

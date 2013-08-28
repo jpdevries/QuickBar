@@ -1,0 +1,7 @@
+@mixin background-size( $dimensions: cover ) {
+	-webkit-background-size: $dimensions;
+	   -moz-background-size: $dimensions;
+	     -o-background-size: $dimensions;
+	   	-ms-background-size: $dimensions;
+	        background-size: $dimensions;
+}

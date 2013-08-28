@@ -1,31 +1,57 @@
 <?php
 
-$s = array(
-    'admin_groups' => 'Administrator',
-    'clear_cache' => true,
+$settingSource = array(
+    'dashboard' => array(
+        'area' => 'Toolbar',
+        'value' => true,
+    ),
+    'create' => array(
+        'area' => 'Toolbar',
+        'value' => true,
+    ),
+    'css' => array(
+        'area' => 'Theme',
+        'value' => '[[++assets_url]]components/quickbar/retro.css',
+    ),
+    'help' => array(
+        'area' => 'Toolbar',
+        'value' => false,
+    ),
+    'helplink' => array(
+        'area' => 'Toolbar',
+        'value' => 'http://rtfm.modx.com/display/revolution20/An+Overview+of+MODX',
+    ),
+   'helptarget' => array(
+    'area' => 'Toolbar',
+    'value' => '_blank',
+),
 );
 
 $settings = array();
 
-foreach ($s as $key => $value) {
-    if (is_string($value) || is_int($value)) { $type = 'textfield'; }
-    elseif (is_bool($value)) { $type = 'combo-boolean'; }
-    else { $type = 'textfield'; }
+/**
+ * Loop over setting stuff to interpret the xtype and to create the modSystemSetting object for the package. (thanks @mark_hamstra)
+ */
+foreach ($settingSource as $key => $options) {
+    $val = $options['value'];
 
-    $parts = explode('.',$key);
-    if (count($parts) == 1) { $area = 'Default'; }
-    else { $area = $parts[0]; }
-    
-    $settings['quickbar.'.$key] = $modx->newObject('modSystemSetting');
-    $settings['quickbar.'.$key]->set('key', 'quickbar.'.$key);
-    $settings['quickbar.'.$key]->fromArray(array(
-        'value' => $value,
-        'xtype' => $type,
+    if (isset($options['xtype'])) $xtype = $options['xtype'];
+    elseif (is_int($val)) $xtype = 'numberfield';
+    elseif (is_bool($val)) $xtype = 'modx-combo-boolean';
+    else $xtype = 'textfield';
+
+    /** @var modSystemSetting */
+    $settings[$key] = $modx->newObject('modSystemSetting');
+    $settings[$key]->fromArray(array(
+        'key' => 'quickbar.' . $key,
+        'xtype' => $xtype,
+        'value' => $options['value'],
         'namespace' => 'quickbar',
-        'area' => $area
-    ));
+        'area' => $options['area'],
+        'editedon' => time(),
+    ), '', true, true);
 }
 
+
+
 return $settings;
-
-

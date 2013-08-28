@@ -1,0 +1,8 @@
+@mixin animation(
+	$what : all
+) {
+  -webkit-animation: $what; /* Safari 4+ */
+  -moz-animation:    $what; /* Fx 5+ */
+  -o-animation:      $what; /* Opera 12+ */
+  animation:         $what; /* IE 10+ */
+}

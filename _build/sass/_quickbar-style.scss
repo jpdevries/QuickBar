@@ -1,0 +1,55 @@
+@mixin quickbar-style(
+  $textColor:#ecf8e1,
+  $borderB:#9ac54f,
+  $barBGL:#131313,
+  $barBG:rgba(19, 19, 19, 0.96),
+  $barShadow:0 2px 2px rgba(0, 0, 0, 0.5),
+  $textColor:white,
+  $textShadow:#263816 0 1px 0,
+  $buttonHighlight:#8ABF5B,
+  $buttonLowLight:black,
+  $fontWeight:bold,
+  $borderBH:$sliverH,
+  $fontSize:12px
+) {
+    #quickbar-wrapper .quickbar {
+      border-bottom: $borderBH solid $borderB;
+      background: $barBGL;
+      background: $barBG;
+      box-shadow: $barShadow;
+      @include transition(all, 160ms, ease-in);
+      &:hover {
+        @include transition(all, 240ms, ease-in);
+      }
+    }
+    #quickbar-wrapper .quickbar ul {
+      color: $textColor;
+      li {
+        text-shadow: $textShadow;
+        border-top: 1px solid $buttonHighlight;
+        border-bottom: 1px solid $buttonLowLight;
+        font-size: $fontSize;
+        border-radius: 4px;
+        opacity: 0.99;
+        font-weight: $fontWeight;
+        background-color: #5D8A36;
+        cursor: pointer;
+        @include box-sizing(border-box, !important);
+        a {
+          color: inherit;
+          text-decoration: none;
+          letter-spacing: 0;
+          &:visited {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+}
+
+@mixin quickbar-fontfamily {
+  #quickbar-wrapper {
+    @content;
+  }
+}

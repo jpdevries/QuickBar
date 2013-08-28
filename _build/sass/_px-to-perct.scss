@@ -1,0 +1,3 @@
+@function px-to-perct( $target,$context ) {
+	@return unquote((($target)/($context)*100) + "%");
+}
