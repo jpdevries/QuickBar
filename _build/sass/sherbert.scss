@@ -1,0 +1,106 @@
+@import "box-sizing";
+@import "transition";
+@import "gradients";
+
+@import "quickbar-layout";
+@import "quickbar-style";
+
+$sliverH:4px;
+
+
+$white:white;
+$offwhite:#F2F2F2;
+$black:black;
+$pink:#CE4DD6;
+
+$orange:#EB511B;
+$lightOrange:#F8681D;
+$grey:#D9D9D9;
+$blue:#3C3B6E;
+$saturatedBlue:#0091ED;
+
+$purple:#4658B6;
+$yellow:#F4D25A;
+$pink:#E6569C;
+$red:#DA2120;
+$salmon:#E7575D;
+
+
+
+/* start layout */
+/* properties */
+$sliverH:4px;
+$barH:40px;
+$buttonH:24px;
+$barPadding:6px;
+$buttonP:4px 8px 1px 8px;
+
+@include quickbar-layout(
+  $sliverH,
+  $barH,
+  $buttonH,
+  $barPadding,
+  $buttonP
+);
+/* end layout */
+
+/* start style */
+/* properties */
+$borderB:$purple; 
+$barBGL:$yellow;
+$barBG:$yellow;
+$barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
+$textColor:$white;
+$textShadow:none;
+$buttonHighlight:rgba(255,255,255,0.6);
+$buttonLowLight:darken($red,10%);
+$fontWeight:normal;
+$fontSize:12px;
+
+$buttonGradientFrom:$yellow 64%;
+$buttonGradientTo:rgba($salmon,0.4) 100%;
+
+@include quickbar-style( /* call quickbar component, pass in properties */
+  $textColor,
+  $borderB,
+  $barBGL,
+  $barBG,
+  $barShadow,
+  $textColor,
+  $textShadow,
+  $buttonHighlight,
+  $buttonLowLight,
+  $fontWeight,
+  $sliverH,
+  $fontSize
+); 
+
+@include quickbar-fontfamily {
+  font-family:"Lucida Console", Monaco, monospace;
+}
+
+#quickbar-wrapper {
+  text-transform: lowercase;
+  .quickbar {
+    @include gradient( background-image, linear-gradient(90deg, $buttonGradientFrom, $buttonGradientTo ) );
+  }
+}
+
+/* add a gradient and a rollover effect */
+#quickbar-wrapper .quickbar ul {
+  li {
+    @include transition(all, 240ms, ease-out);
+    background:$pink;
+    @include gradient( background-image, linear-gradient(180deg, $pink 50%, rgba($red,0.5) 100% ) );
+    opacity:0.86;
+    &:hover {
+      /*color:$saturatedBlue;*/
+      background:$red;
+      opacity:1;
+      @include gradient( background-image, linear-gradient(180deg, $pink 50%, rgba($red,1) 100% ) );
+      /*background:rgba(white,0.86);*/
+
+    }
+  }
+}
+/* end style */
