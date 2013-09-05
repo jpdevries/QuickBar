@@ -104,7 +104,7 @@ If you aren't using Codekit, just make sure your sass builds to the correct loca
 
 ## Using the Sass Component
 If you are up and running on Sass, creating themes couldn't be easier. Here's a look at how the aquanight works.
-````
+```sass
 @import "box-sizing";
 @import "transition";
 @import "gradients";
