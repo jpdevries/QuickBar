@@ -17,12 +17,12 @@ $sliverH:4px;
 $barH:40px;
 $buttonH:24px;
 $barPadding:6px;
-$buttonP:4px 8px 1px 8px;
+$buttonP:4px 8px 1px 8px; 
 
 @include quickbar-layout(
   $sliverH,
   $barH,
-  $buttonH, 
+  $buttonH,
   $barPadding,
   $buttonP
 );
@@ -30,19 +30,19 @@ $buttonP:4px 8px 1px 8px;
 
 /* start style */
 /* properties */
-$borderB:#C1C2E2;
-$barBGL:#DBD6CE;
-$barBG:#DBD6CE;
+$borderB:#3F2D73;
+$barBGL:#997CA8;
+$barBG:#997CA8;
 $barShadow:0 1px 1px rgba(0, 0, 0, 0.5);
-$textColor:darken(#C1C2E2,20%);
+$textColor:#3F2D73;
 $textShadow:none;
-$buttonHighlight:lighten(#F2EBE6,90%);
-$buttonLowLight:darken(#DBD6CE,20%);
+$buttonHighlight:lighten(#997CA8,90%);
+$buttonLowLight:darken(#997CA8,20%);
 $fontWeight:normal;
 $fontSize:12px;
 
-$buttonGradientFrom:rgb(72,72,72) 42%;
-$buttonGradientTo:rgb(72,72,72) 100%;
+$buttonGradientFrom:#997CA8 42%;
+$buttonGradientTo:#997CA8 100%;
 
 @include quickbar-style( /* call quickbar component, pass in properties */
   $textColor,
@@ -71,11 +71,11 @@ $buttonGradientTo:rgb(72,72,72) 100%;
 #quickbar-wrapper .quickbar ul {
   li {
     @include transition(all, 240ms, ease-out);
-    background:#F2EBE6;
+    background:lighten(#997CA8,30%);
     /*@include gradient( background-image, linear-gradient(180deg, $buttonGradientFrom, $buttonGradientTo ) );*/
     &:hover {
       
-      background:#FCFCFC;
+      background:white;
     }
   }
 }

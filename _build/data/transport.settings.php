@@ -11,7 +11,7 @@ $settingSource = array(
     ),
     'css' => array(
         'area' => 'Theme',
-        'value' => '[[++assets_url]]components/quickbar/retro.css',
+        'value' => '[[++assets_url]]components/quickbar/css/sublime.css',
     ),
     'help' => array(
         'area' => 'Toolbar',
