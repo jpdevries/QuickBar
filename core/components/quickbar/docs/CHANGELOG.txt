@@ -1,5 +1,10 @@
 Changelog for QuickBar integration into MODx Revolution.
 
+QuickBar 1.0.3
+====================================
+ - Simplify authentication logic
+ - Fix unwanted errors in error log
+
 QuickBar 1.0.2
 ====================================
  - Added purplerain theme
