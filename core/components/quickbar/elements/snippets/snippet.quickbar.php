@@ -1,5 +1,5 @@
 <?php
-if (!$modx->user->hasSessionContext('mgr') || !$modx->hasPermission('edit_resource') ) return '';
+if (!$modx->user->hasSessionContext('mgr') || !$modx->hasPermission('edit_document') ) return '';
 
 $defaultQuickBarCorePath = $modx->getOption('core_path').'components/quickbar/';
 $quickbarsCorePath = $modx->getOption('quickbar.core_path',null,$defaultQuickBarCorePath);
