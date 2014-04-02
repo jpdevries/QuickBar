@@ -1,5 +1,9 @@
 Changelog for QuickBar integration into MODx Revolution.
 
+QuickBar 1.0.4
+====================================
+Change permission check to edit_document #12 - thanks @jeremysanchez
+
 QuickBar 1.0.3
 ====================================
  - Simplify authentication logic
