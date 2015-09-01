@@ -18,4 +18,4 @@ switch($classKey) {
     break;
 }
 
-return MODX_MANAGER_URL . "?id=$id&a=55&class_key=$classKey&parent=$id&context_key=$context";
+return MODX_MANAGER_URL . "?id=$id&a=resource/create&class_key=$classKey&parent=$id&context_key=$context";
