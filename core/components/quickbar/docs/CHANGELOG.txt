@@ -2,7 +2,8 @@ Changelog for QuickBar integration into MODx Revolution.
 
 QuickBar 1.0.4
 ====================================
-Change permission check to edit_document #12 - thanks @jeremysanchez
+ - Change permission check to edit_document #12 - thanks @jeremysanchez
+ - Update quickbar.chunk.tpl #18 (thanks to sottwell for the PR)
 
 QuickBar 1.0.3
 ====================================
